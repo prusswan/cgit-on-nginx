@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CGIT_SCRIPT=/usr/local/bin/cgit-fastcgi
+CGIT_SCRIPT=/usr/local/bin/cgit-fcgiwrap
 FASTCGI_USER=www-data
 FASTCGI_GROUP=www-data
 PID_DIR=/var/run/cgit-fastcgi

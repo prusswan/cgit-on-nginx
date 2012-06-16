@@ -5,7 +5,7 @@ server {
   access_log  /var/log/nginx/cgit-access.log;
   error_log   /var/log/nginx/cgit-error.log;
 
-  location /git {
+  location /cgit {
     gzip off;
     alias /usr/local/cgit/share;
 
@@ -35,9 +35,9 @@ server {
     fastcgi_param  SERVER_PORT        $server_port;
     fastcgi_param  SERVER_NAME        $server_name;
 
-    # Tell nginx to consider everything after /git as PATH_INFO. This way
+    # Tell nginx to consider everything after /cgit as PATH_INFO. This way
     # we get nice, clean URL’s
-    fastcgi_split_path_info           ^(/git)(/?.+)$;
+    fastcgi_split_path_info           ^(/cgit)(/?.+)$;
 
     # Unfortunately the version of fcgiwrap currently available in Debian
     # squeeze removes the PATH_INFO variable from the CGI environment and
